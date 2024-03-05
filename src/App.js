@@ -1,11 +1,12 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import { Home, Cart } from './pages';
+import { Header } from './components';
 
 function App() {
   return (
     <div>
-      <h1>Navbar</h1>
+      <Header />
       <Routes>
         <Route exact path='/' element={<Home />} />
         <Route path='/cart' element={<Cart />} />
