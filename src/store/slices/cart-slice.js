@@ -9,7 +9,18 @@ const initialState = [];
 const cartSlice = createSlice({
   name: 'cart',
   initialState,
-  reducers: {},
+  reducers: {
+    addToCart(state, action) {
+      console.log(action);
+      state.push(action.payload);
+    },
+  },
 });
 
+export const { addToCart } = cartSlice.actions;
+
 export default cartSlice.reducer;
+
+/*
+ * TODO: rewrite addToCart (dont't use .push)
+ */
